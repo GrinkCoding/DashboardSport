@@ -1,0 +1,417 @@
+
+:root {
+    /* Arrière-plans */
+    --bg-main: #0B1220;
+    --bg-card: #151F33;
+    --border-color: #2A3B59;
+
+    /* Couleurs sportives */
+    --color-running: #2997FF;
+    --color-cycling: #4FE28A;
+    --color-purple: #8B5CF6;
+
+    /* Typographie */
+    --text-primary: #F5F7FB;
+    --text-secondary: #AAB8CE;
+
+    /* Dimensions */
+    --banner-height: 10rem;
+    --spacing: .6rem;
+    --border-width: 0.125rem;
+    --radius: 0.5rem;
+}
+
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Conteneur principal */
+.dashbord {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+/* Navigation */
+nav {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 12%;
+    flex-shrink: 0;
+    background-color: var(--bg-card);
+    border-right: var(--border-width) solid var(--border-color);
+
+}
+.block1{
+    width: 100%;
+    height: 67%;
+}
+
+nav ul{
+    list-style: none;
+}
+
+h1{
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,.5);
+    transform: rotate(-15deg);
+    color : var(--text-primary);
+    margin-top: 2rem;
+    /* margin-bottom: 3rem; */
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+
+}
+
+.nav-icones{
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--text-secondary);
+}
+
+
+.icone-home {
+    mask-image: url("./icons/home.svg");
+    -webkit-mask-image: url("./icons/home.svg");
+}
+
+.icone-sorties{
+    mask-image: url("./icons/sorties.svg");
+    -webkit-mask-image: url("./icons/sorties.svg");
+}
+
+
+.icone-objectifs{
+    mask-image: url("./icons/objectifs.svg");
+    -webkit-mask-image: url("./icons/objectifs.svg");   
+}
+
+.icone-records{
+    mask-image: url("./icons/records.svg");
+    -webkit-mask-image: url("./icons/records.svg");
+
+}
+
+.icone-progression{
+    mask-image: url("./icons/progression.svg");
+    -webkit-mask-image: url("./icons/progression.svg");
+}
+
+.icone-parametre{
+     mask-image: url("./icons/settings.svg");
+    -webkit-mask-image: url("./icons/settings.svg");   
+
+}
+
+.nav-list{
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav-list-item{
+    padding: 0.5rem ;
+    margin-bottom: 1rem;
+    border-radius:0.5rem;
+    display: flex;
+    align-items: center;
+    gap:0.4rem;
+    
+}
+
+.nav-liens{
+    color:var(--text-secondary);
+    text-decoration: none;
+}
+
+.bouton-actif-nav-list-item {
+    background: var(--color-running);
+}
+
+.bouton-actif-nav-liens{
+    color:var(--text-primary);
+}
+
+.bouton-actif-nav-icones{
+    background-color: var(--text-primary);
+}
+
+
+.card-objectif{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width:93%;
+    height: 25%;
+    background-color: var(--bg-card);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--radius);
+    
+}
+
+.icon_runner{
+    width: 1.5rem;
+    margin-left:0.8rem;
+    /* margin-top: .5rem; */
+}
+
+.texte1-card-objectif{
+    color : var(--text-primary);
+    margin-left:0.8rem;
+    font-size: 0.9rem;
+}
+
+.texte2-card-objectif{
+    color : var(--text-secondary);
+    margin-left:.8rem;
+     font-size: 0.7rem;
+}
+
+.barre-avancer-box{
+    margin-top: 1rem;
+    width: 85%;
+    height: 0.4rem;
+    margin-left:0.8rem;
+    border-radius: 1rem;
+    background-color: var(--border-color);
+
+}
+
+.barre-avancer-objectif{
+    width: 70%;
+    height: 0.4rem;
+    border-radius: 1rem;
+    background-color:var(--color-running);
+}
+
+
+/* Conteneur du dashboard */
+.dashbord-container {
+    height: 100vh;
+    width: 88%;
+    min-width: 0;
+    background-color: var(--bg-main);
+
+    display: grid;
+    grid-template-rows: var(--banner-height) minmax(0, 1fr);
+}
+
+/* Bandeau */
+.bandeau {
+    width: 100%;
+    height: 100%;
+    position:relative;
+    background-image:linear-gradient( 90deg,rgba(11, 18, 32, 0.90) 0%, rgba(11, 18, 32, 0.55) 35%, rgba(11, 18, 32, 0.15) 70%,rgba(11, 18, 32, 0) 100%),url("bandeau_runner_city2.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    /* background-size:100%;
+    Background-position:50% 20%; */
+    
+}
+
+.text-bandeau{
+    color : var(--text-primary);
+    position: absolute;
+    top: 2rem;
+    left:4rem;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+/* Contenu du dashboard */
+.dashbord-box {
+    width: 100%;
+    min-height: 0;
+
+    padding: 1rem;
+    margin-top: 0;
+
+    display: grid;
+    /* grid-template-rows: repeat(3, minmax(0, 1fr)); */
+    grid-template-rows:1fr 3fr 2fr;
+    gap: 0.8rem;
+}
+
+/* Sections */
+.indicateur,
+.graph,
+.evolution {
+    width: 100%;
+    /* min-height: 0; */
+
+    display: grid;
+    column-gap: var(--spacing);
+}
+
+/* Grille des indicateurs */
+.indicateur {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Grille des graphiques */
+.graph {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Grille des évolutions */
+.evolution {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Cartes */
+.indicateur-box,
+.graph-box,
+.evolution-box {
+    /* min-width: 0;
+    min-height: 0; */
+
+    background-color: var(--bg-card);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--radius);
+
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.indicateur-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* align-items: center; */
+}
+
+.indicateur-point{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    position:absolute;
+    top:21%;
+    left:15%;
+}
+
+.indicateur-couleur-bleu{
+    background-color: var(--color-running);
+}
+
+.indicateur-couleur-violet{
+    background-color: var(--color-purple);
+}
+
+.indicateur-couleur-vert{
+    background-color: var(--color-cycling);
+}
+
+.indicateur-couleur-orange{
+    background-color: orange;
+}
+
+.indicateur-donnee{
+    font-size: 2rem;
+}
+
+.texte-donnee{
+    font-size: 0.8rem;
+    color : var(--text-secondary);
+    /* margin-left:-2.2rem; */
+}
+
+.hausse-donnee{
+    font-size: 0.7rem;
+    color:var(--color-cycling);
+
+    /* margin-left:1.5rem; */
+}
+
+.indicateur-texte-donnees{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: left;
+    
+}
+
+/* Box Graph */
+
+.graph-box-titre{
+    height: 3rem;
+    width: 100%;
+    display:flex; 
+    /* justify-content:space-between;   */
+    align-items:center;
+    gap:0.75rem;
+    padding: 0 2rem;   
+}
+
+.graph-point-bleu::before{
+    content: "";
+    display: inline-block;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    background: var(--color-running);
+    flex-shrink: 0;
+}
+
+.graph-point-vert::before{
+    content: "";
+    display: inline-block;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    background: var(--color-cycling);
+    flex-shrink: 0;
+}
+
+.graph-box-en-tete{
+    font-size:1.2rem;
+    font-weight: 700;
+}
+
+.graph-box-voir-plus{
+    font-size: 0.8rem;
+    color:var(--color-running);
+}
+
+.graph-box-titre p:last-child {
+    margin-left: auto;
+}
+
+.graph-box-stat{
+    height: 3rem;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    text-align: left;
+    padding: 0 2rem;
+    /* margin: 0 auto; */
+}
+
+.graph-stat-item{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.graph-stat-items-libelle{
+    font-size: 0.8rem;
+    color:var(--text-secondary)
+}
+
+/* .graphique{
+    background-color: red;
+} */
+
