@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_dashboard.css">
+    <title>Dashboard sportif</title>
+</head>
+<body>
+    
+
+    <div class="dashbord">
+
+        <!-- Barre de navigation -->
+        <nav>
+
+            <div class="block1">
+                <div class="nav-logo">
+                    <h1>Running Stats</h1>
+                </div>
+                <div class="nav-list">
+                    <ul>
+                        <li class="nav-list-item">
+                            <!---->
+                            <!--<img src="./icons/home.svg" alt="Maison" width="24">-->
+                            <span class="nav-icones icone-home"></span>
+                            <a href="#" class="nav-liens">Tableau de bord</a>
+                        </li>
+                        <li class="nav-list-item bouton_actif">
+                            <span class="nav-icones icone-sorties"></span>
+                            <a href="#" class="nav-liens">Mes sorties</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <span class="nav-icones icone-objectifs"></span>
+                            <a href="#" class="nav-liens">Mes objectifs</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <span class="nav-icones icone-records"></span>
+                            <a href="#" class="nav-liens">Mes records</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <span class="nav-icones icone-progression"></span>
+                            <a href="#" class="nav-liens">Progression</a>
+                        </li>
+                        <li class="nav-list-item">
+                        <span class="nav-icones icone-parametre"></span>
+                        <a href="#" class="nav-liens">Paramètres</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card-objectif">
+                <img class="icon_runner" src="icons/runner-emoji.png" alt="icone runner">
+                <p class="texte1-card-objectif">Continue sur ta lancée !</p>
+                <div class="objectif-barre">
+                    <p class="texte2-card-objectif">Objectif mensuel</p>
+                    <div class="barre-avancer-box">
+                        <div class="barre-avancer-objectif"></div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Main -->
+        <div class="dashbord-container">
+
+            <!-- header              -->
+            <header class="bandeau">
+                <div class="text-bandeau">
+                    <h2>Bonjour ! </h2>
+                    <p>Voici un apperçu de tes performance sportives.</p>
+                </div>
+
+                <div class="bandeau-image"></div>
+            </header>
+
+            <!-- Box Stats -->
+            <main class="dashbord-box">
+
+                <section class="indicateur">
+
+                    <div class="indicateur-box">
+                        <div class="indicateur-point indicateur-couleur-bleu"></div>                        
+                        <div class="indicateur-texte-donnees">
+                            <p class="indicateur-donnee"><span class="kms-donnees">0</span>  kms</p>
+                            <p class="texte-donnee">Distance totale</p>
+                            <!-- &#9650 fleche haute -->
+                            <!-- &#9660 fleche basse -->
+                            <!-- <p class="hausse-donnee">&#9650 +12% vs période précédente</p> -->
+                        </div>
+
+                    </div>
+
+                    <div class="indicateur-box">
+                        <div class="indicateur-point indicateur-couleur-violet"></div>
+                        <div class="indicateur-texte-donnees">
+                            <p class="indicateur-donnee"><span class="temps-donnees">00h00min00s</span></p>
+                            <p class="texte-donnee">Temps d'activité</p>
+                            <!-- &#9650 fleche haute -->
+                            <!-- &#9660 fleche basse -->
+                            <!-- <p class="hausse-donnee">&#9650 +12% vs période précédente</p>                             -->
+                        </div>
+                       
+                    </div>
+
+                    <div class="indicateur-box">
+                        <div class="indicateur-point indicateur-couleur-vert"></div>
+                        <div class="indicateur-texte-donnees">
+                            <p class="indicateur-donnee"><span class="frequence-donnees">0</span> bpm</p>
+                            <p class="texte-donnee">FC moyenne</p>
+                            <!-- &#9650 fleche haute -->
+                            <!-- &#9660 fleche basse -->
+                            <!-- <p class="hausse-donnee">&#9650 +12% vs période précédente</p>  -->
+                        </div>
+
+                    </div>
+
+                    <div class="indicateur-box">
+                        <div class="indicateur-point indicateur-couleur-orange"></div>
+                        <div class="indicateur-texte-donnees">
+                            <p class="indicateur-donnee"><span class="calories-donnees">0</span> kcal</p>
+                            <p class="texte-donnee">Calories dépensées</p>
+                            <!-- &#9650 fleche haute -->
+                            <!-- &#9660 fleche basse -->
+                            <!-- <p class="hausse-donnee">&#9650 +12% vs période précédente</p>                             -->
+                        </div>
+ 
+                    </div>
+
+                </section>
+
+                <section class="graph">
+                    <div class="graph-box">
+                        <div class="graph-box-titre">
+                            <span class="graph-point-bleu"></span>
+                            <p class="graph-box-en-tete">Course à pied</p>
+                            <p><a href="#" class="graph-box-voir-plus">Voir plus</a></p>
+                        </div>
+                        <div class="graph-box-stat">
+                            <div>
+                                <p class="graph-stat-item">82.3 km</p>
+                                <p class="graph-stat-items-libelle">Distance ce mois-ci</p>
+                            </div>
+
+                            <div>
+                                <p class="graph-stat-item">6h48min</p>
+                                <p class="graph-stat-items-libelle">Temps d'activité</p>
+                            </div>
+
+                             <div>
+                                <p class="graph-stat-item">5:12 /km</p>
+                                <p class="graph-stat-items-libelle">Allure moyenne</p>
+                            </div>
+                        </div>
+                        <div class="graphique">
+                            <canvas></canvas>
+                        </div>   
+                    </div>
+
+                    <div class="graph-box">
+                        <div class="graph-box-titre">
+                            <span class="graph-point-vert"></span>
+                            <p class="graph-box-en-tete">Vélo</p>
+                            <p><a href="#" class="graph-box-voir-plus">Voir plus</a></p>
+                        </div>
+                        <div class="graph-box-stat">
+                            <div>
+                                <p class="graph-stat-item">43.1 km</p>
+                                <p class="graph-stat-items-libelle">Distance ce mois-ci</p>
+                            </div>
+
+                            <div>
+                                <p class="graph-stat-item">3h44min</p>
+                                <p class="graph-stat-items-libelle">Temps d'activité</p>
+                            </div>
+
+                             <div>
+                                <p class="graph-stat-item">23.7 km/h</p>
+                                <p class="graph-stat-items-libelle">Vitesse moyenne</p>
+                            </div>
+                        </div>
+                        <div class="graphique">
+                            <canvas></canvas>
+                        </div>   
+                    </div>
+                </section>
+
+                <section class="evolution">
+                    <div class="evolution-box"></div>
+                    <div class="evolution-box"></div>
+                    <div class="evolution-box"></div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+<script src="main_dashboard.js"></script>
+
+</body>
+</html>
