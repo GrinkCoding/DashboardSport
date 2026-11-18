@@ -60,19 +60,191 @@ for (let i = 0; i < tabDuree.length; i++) {
 
 dureeTemps.textContent = formaterDuree(total);
 
-
 //frequence cardique
 const cardioMoyen = document.querySelector(".frequence-donnees");
 
-const tabCardio = [156,151,155];
+const tabCardio = [156, 151, 155];
 
-cardioMoyen.textContent = Math.round(calcultotal(tabCardio)/tabCardio.length);
+cardioMoyen.textContent = Math.round(calcultotal(tabCardio) / tabCardio.length);
 
 // Calories totales
 const caloriesTotales = document.querySelector(".calories-donnees");
 
-const tabCalories= [279,278,281];
+const tabCalories = [279, 278, 281];
 
 caloriesTotales.textContent = calcultotal(tabCalories);
 
+//Graphique
 
+const ctxRunning = document.getElementById("graph-running");
+
+new Chart(ctxRunning, {
+  type: "line",
+
+  data: {
+    labels: ["S1", "S2", "S3"],
+
+    datasets: [
+      {
+        label: "Nombre de kilomètres / sortie",
+
+        data: [2, 3, 4],
+
+        borderColor: "#2997FF",
+        backgroundColor: "rgba(41, 151, 255, 0.15)",
+
+        borderWidth: 3,
+        pointRadius: 5,
+        pointBackgroundColor: "#2997FF",
+
+        fill: true,
+        tension: 0.4,
+      },
+    ],
+  },
+
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+
+    plugins: {
+      legend: {
+        labels: {
+          color: "white",
+          boxWidth: 0,
+        },
+      },
+    },
+
+    scales: {
+      x: {
+        ticks: { color: "#AAB7CC" },
+        grid: { color: "#2A3B59" },
+      },
+
+      y: {
+        beginAtZero: false,
+        ticks: { color: "#AAB7CC" },
+        grid: { color: "#2A3B59" },
+      },
+    },
+  },
+});
+
+const ctxBike = document.getElementById("graph-bike");
+
+new Chart(ctxBike, {
+  type: "line",
+
+  data: {
+    labels: ["S1"],
+
+    datasets: [
+      {
+        label: "Nombre de kilomètres / sortie",
+
+        data: [0],
+
+        borderColor: "#4FE28A",
+        backgroundColor: "rgba(41, 151, 255, 0.15)",
+
+        borderWidth: 3,
+        pointRadius: 5,
+        pointBackgroundColor: "#4FE28A",
+
+        fill: true,
+        tension: 0.4,
+      },
+    ],
+  },
+
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+
+    plugins: {
+      legend: {
+        labels: {
+          color: "white",
+          boxWidth: 0,
+        },
+      },
+    },
+
+    scales: {
+      x: {
+        ticks: { color: "#AAB7CC" },
+        grid: { color: "#2A3B59" },
+      },
+
+      y: {
+        beginAtZero: false,
+        ticks: { color: "#AAB7CC" },
+        grid: { color: "#2A3B59" },
+      },
+    },
+  },
+});
+
+const ctxProgres = document.getElementById("graph-progres");
+
+new Chart(ctxProgres, {
+  type: "bar",
+
+  data: {
+    labels: [
+      "Jan",
+      "Fév",
+      "Mars",
+      "Avr",
+      "Mai",
+      "Juin",
+      "Juil",
+      "Aout",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
+
+    datasets: [
+      {
+        label: "Kilomètres prévus",
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 20],
+        backgroundColor: "#2997FF",
+      },
+      {
+        label: "Kilomètres réalisés",
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0],
+        backgroundColor: "#4FE28A",
+      },
+    ],
+  },
+
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+
+    plugins: {
+      legend: {
+        labels: {
+          color: "white",
+        //   boxWidth: 0,
+        },
+      },
+    },
+
+    scales: {
+      x: {
+        ticks: { color: "#AAB7CC" },
+        grid: { display: false },
+      },
+
+      y: {
+        beginAtZero: true,
+        ticks: { color: "#AAB7CC" },
+        grid: { color: "#2A3B59" },
+      },
+    },
+  },
+});
