@@ -239,7 +239,7 @@ h2{
     display: grid;
     /* grid-template-rows: repeat(3, minmax(0, 1fr)); */
     grid-template-rows:1fr 3fr 2fr;
-    gap: 0.8rem;
+    gap: 0.6rem;
 }
 
 /* Sections */
@@ -318,7 +318,7 @@ h2{
 }
 
 .indicateur-donnee{
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 .texte-donnee{
@@ -338,6 +338,7 @@ h2{
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
+    margin-bottom: 0.5rem;
     
 }
 
