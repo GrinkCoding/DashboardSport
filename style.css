@@ -408,6 +408,10 @@ h2{
     color:var(--text-secondary)
 }
 
+.graphique{
+    height:64%;
+}
+
 /* EVOLUTION */
 
 .evolution-box-titres{
@@ -416,6 +420,7 @@ h2{
     /* align-items: center; */
     
 }
+
 
 .sortie-box{
     width: 100%;
@@ -431,6 +436,10 @@ h2{
     margin-bottom: 1rem;
     margin-top: 0.5rem;
     margin-left: 1rem;
+}
+
+.box-objectif{
+    height: 70%;
 }
 
 .evolution-titre-lien{
